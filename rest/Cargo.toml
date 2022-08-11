@@ -1,0 +1,20 @@
+[package]
+name = "gravitalia"
+version = "1.0.0"
+edition = "2021"
+
+[profile.release]
+opt-level = 3
+lto = true
+
+[profile.dev]
+opt-level = 0
+debug = true
+
+[dependencies]
+tokio = { version = "*", features = ["full"] }
+warp = "*"
+
+redis = "0.21.5"
+
+dotenv = "0.15.0"
